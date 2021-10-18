@@ -87,6 +87,52 @@ a:focus {
 
 
 }
+
+.testimonials {
+  border: 6px solid rgb(194, 191, 191);
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 100px;
+}
+
+/* Clear floats after containers */
+.testimonials::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.testimonials img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.testimonials span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.register{
+  text-align: center;
+}
+
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+  .testimonials {
+    text-align: center;
+  }
+
+  .testimonials img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
+
 .login-form input{
 
   justify-content: center;

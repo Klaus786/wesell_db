@@ -13,7 +13,7 @@ $cPassword=$_POST['passwordConfirmation'];
    if (!preg_match("/^[a-zA-Z0-9]*$/", $userName)) 
     {
 	
-         echo "invalid name";
+      echo '<script>alert("Invalid name")</script>';
 
        exit();
     }
@@ -22,7 +22,10 @@ $cPassword=$_POST['passwordConfirmation'];
 
      {
 
-  	   echo "the password does not match";
+      echo '<script>alert("Password does not match")</script>';
+   
+    
+      
 
         exit();
      }
@@ -57,7 +60,7 @@ $sql = "SELECT * FROM  users where userName=? AND passwordConfirmation =?;" ;
 $statement=mysqli_stmt_init($con);
 
 if (!mysqli_stmt_prepare($statement,$sql)) {
-  echo "eror";
+  echo '<script>alert("Error - something went wrong")</script>';
   exit();
   }
 else{
@@ -70,7 +73,7 @@ else{
       $result=mysqli_stmt_num_rows($statement);
 
       if ($result>0) {
-        echo "username taken";
+        echo '<script>alert("Username Taken")</script>';
     
 
    }
@@ -83,7 +86,7 @@ $statement=mysqli_stmt_init($con);
 
 
 if (!mysqli_stmt_prepare($statement,$sql)) {
-	echo "eroor";
+	echo '<script>alert("Error - something went wrong")</script>';
  
 }
 else
@@ -91,8 +94,11 @@ else
     mysqli_stmt_execute($statement);
 
 
-echo "sucess";
+echo '<script>alert("Succesfully Registered")</script>';
  exit();
+
+ 
+ 
 
 }
 }

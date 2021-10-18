@@ -137,13 +137,13 @@
             <h2>Sign In</h2>
         </div>
         <form action="login_action.php" method="post">
-            <input type="text" placeholder="enter your useer name" name="userName" required>
-            <input type="password" placeholder="password" name="password" required>
-            <a href="register.php" style="margin-right: 15px; float: right">Register</a><br>
-            <<<<<<< HEAD <a href="register.php" style=" float: right;margin-top: 15px; margin-right: 15px">Forgot
-                Password</a>
-                =======
-                >>>>>>> ee06ca2c1985ff5a8c9f2943734b4409e5922f10
+            <input type="text" placeholder="Username" name="userName" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <div class="register">
+            <a href="register.php" style="text">Register</a><br>
+            </div>
+            
+              
                 <input type="submit" value="Login" name="login">
 
         </form>

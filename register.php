@@ -53,7 +53,7 @@
                 <div class="header-right">
                     <ul class="list-unstyled list-inline">
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">ZAR </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Currency :</span><span class="value">ZAR </span><b class="caret"></b></a>
                             <ul class="dropdown-menu">
   
                         </li>
@@ -130,11 +130,13 @@
     <div class="login-form" method="post">
         <div class="loginText"><h2>Sign up</h2></div>
      <form action="register_action.php" method="POST">
-        <input type="text"placeholder="name" name="userName" required >
+        <input type="text"placeholder="Name" name="userName" required >
         <input type="email"placeholder="Email Address" name="email" required >
-         <input type="password" placeholder="password" name="password" required >
+         <input type="password" placeholder="Password" name="password" required >
          <input type="password" placeholder=" Confirm  password" name="passwordConfirmation" required >
          <input type="submit" value="register" name="submit">
+         
+
          
      </form>
     </div>>
