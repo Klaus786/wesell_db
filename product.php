@@ -92,16 +92,11 @@ if(empty($_SESSION["shopping_cart"])) {
                 <div class="header-right">
                     <ul class="list-unstyled list-inline">
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">ZAR </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Currency: </span><span class="value">ZAR </span><b class="caret"></b></a>
                             <ul class="dropdown-menu">
   
                         </li>
-  
-                        <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">English</a></li>
-                               
+
                             </ul>
                         </li>
                     </ul>
@@ -132,32 +127,7 @@ $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 ?>    
             </div>
         </div>
-    </div> <!-- End site branding area 
-  <div class="mainmenu-area">
-    <div class="container">
-        <div class="row">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div> 
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Products</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</div>
-  
-                </ul>
-            </div>  
-        </div>
-    </div>
-  </div> End mainmenu area -->
+    </div> 
   <div class="product-big-title-area">
     <div class="container">
         <div class="row">

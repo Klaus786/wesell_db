@@ -1,3 +1,27 @@
+<?php
+
+//session_start();
+include('db.php');
+//$status="";
+
+if (isset($_POST['save'])){
+    //$ship_id = $_POST['ship_id'];
+    //$result = mysqli_query($con,"SELECT * FROM `shipping` WHERE `ship_id`='$ship_id'");
+    //$row = mysqli_fetch_assoc($result);
+    $firstname = $_POST['firstname'];
+    //$city = $_POST['city'];
+    //$street = $_POST['street'];
+    //$number = $_POST['number'];
+    //$postcode = $_POST['postcode'];
+
+    //write sql query
+    $sql = "INSERT INTO `shipping`(`firstname`)";
+
+    //$result = $conn->query($sql);
+
+    //$conn->close();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -609,8 +633,6 @@
                 </div>
             </div>
 
-
-
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -621,7 +643,7 @@
                             <h4 class="modal-title">Shipping Address</h4>
                         </div>
                         <div class="modal-body">
-                            <form role="form" method="post" action="">
+                            <form role="form" method="POST">
                                 <div class="woocommerce-shipping-fields">
                                     <div class="shipping_address" style="display: block;">
                                         <p id="shipping_country_field"
@@ -900,21 +922,21 @@
                                                 <option value="ZW">Zimbabwe</option>
                                             </select>
                                         </p>
-
-                                        <p id="shipping_first_name_field"
+ 
+                                        <p id="shipping_first_name"
                                             class="form-row form-row-first validate-required">
                                             <label class="" for="shipping_first_name">First Name
                                                 <abbr title="required" class="required">*</abbr>
                                             </label>
-                                            <input type="text" value="" placeholder="" id="shipping_first_name"
-                                                name="shipping_first_name" class="input-text ">
+                                            <input type="text" value="<?php echo $firstname?>" id="shipping_first_name"
+                                                name="shipping_first_name" class="input-text">
                                         </p>
-                                        <p id="shipping_last_name_field"
+                                        <p id="shipping_last_name"
                                             class="form-row form-row-last validate-required">
                                             <label class="" for="shipping_last_name">Last Name
                                                 <abbr title="required" class="required">*</abbr>
                                             </label>
-                                            <input type="text" value="" placeholder="" id="shipping_last_name"
+                                            <input type="text" value="" id="shipping_last_name"
                                                 name="shipping_last_name" class="input-text ">
                                         </p>
                                         <!-- <div class="clear"></div> -->
@@ -969,8 +991,10 @@
                                                 id="shipping_postcode" name="shipping_postcode" class="input-text ">
                                         </p>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary"><a href="checkout.php"
-                                                    style="cursor: pointer;color:white">Save</a></button>
+                                        <!--    <button type="button" class="btn btn-primary"><a href="checkout.php"
+                                                    style="cursor: pointer;color:white">Save</a></button> -->
+
+                                                    <button type="button" class="btn btn-primary" name="save" value="Save">
                                         </div>
                                     </div>
                                 </div>
